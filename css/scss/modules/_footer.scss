@@ -1,0 +1,22 @@
+.footer{
+    width: 100%;
+    height: auto;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $title;
+    margin-top: 71px;
+
+    .footer{
+
+        &-icon{
+
+            svg{
+                width: 40px;
+                height: 32px;
+                @include svg-color($color-text-bg4);
+            }
+        }
+    }
+}

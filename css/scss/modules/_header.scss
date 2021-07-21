@@ -1,0 +1,17 @@
+.header{
+    width: 100%;
+    background-color: $white;
+    padding-top: 15px;
+    position: relative;
+    z-index: 15;
+
+    .header{
+
+        &-details{
+
+            @media(max-width: 1200px){
+                display: none !important;
+            }
+        }
+    }
+}

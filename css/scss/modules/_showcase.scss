@@ -1,0 +1,123 @@
+.showcase{
+
+    .showcase{
+
+        &-title{
+            @include text(34, 34, 700, $title, $roboto);
+            display: block;
+            text-align: center;
+            margin-bottom: 45px;
+            margin-top: 36px;
+        }
+
+        &-content{
+
+            .slick-list.draggable{
+                padding-bottom: 15px;
+            }
+        }
+
+        &-icon{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+
+            &-next{
+                right: 0;
+            }
+
+            &-prev{
+                left: 0;
+            }
+
+            svg{
+                width: 30px;
+                height: 30px;
+                @include svg-color($title);
+            }
+        }
+
+        &-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+            text-align: center;
+            padding: 20px 15px;
+            border: 1px solid transparent;
+
+            &:hover{
+                animation: glowing-border 1s infinite;
+            }
+
+            &.slick-slide{
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+
+            &__image{
+                width: 100%;
+                max-width: 330px;
+                height: auto;
+
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &__info{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: column;
+            }
+
+            &__name{
+                @include text(16, 16, 400, $text, $roboto);
+                display: block;
+                margin-top: 16px;
+            }
+
+            &__price{
+                @include text(24, 24, 700, $text, $roboto);
+                display: block;
+                margin-top: 24px;
+            }
+
+            &__installments{
+                @include text(14, 14, 400, $text, $roboto);
+                display: block;
+                margin-top: 8px;
+
+                strong{
+                    @include text(24, 24, 700, $text, $roboto);
+                }
+            }
+
+            &__buy{
+                @include text(16, 16, 700, $white, $roboto);
+                width: 100%;
+                max-width: 330px;
+                height: auto;
+                min-height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color-text-bg1;
+                text-align: center;
+                margin-top: 43px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                z-index: 2;
+
+                &:hover{
+                    color: $white;
+                    animation: pulsing-border 1s infinite;
+                }
+            }
+        }
+    }
+}

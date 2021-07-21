@@ -1,0 +1,90 @@
+$base-size: 16;
+
+@function convert($target, $context: $base-size){
+    @return ($target / $context) * 1rem;
+}
+
+@mixin text($size, $lineHeight, $weight, $color, $family){
+    font-size: convert($size);
+    line-height: convert($lineHeight);
+    font-weight: $weight;
+    color: $color;
+    font-family: $family;
+}
+
+@mixin svg-color($color){
+    path, ellipse, polygon, circle, rect{
+        fill: $color;
+    }
+}
+
+@mixin scroll-bar($width, $thumb, $track){
+
+    &::-webkit-scrollbar{
+        width: $width;
+
+        &-track{
+            background-color: $track;
+        }
+
+        &-thumb{
+            background-color: $thumb;
+        }
+    }
+}
+
+@mixin no-mouse-effects{
+    &:hover, &:active, &:focus, &:visited{
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+@keyframes glowing-border{
+    0%{
+        border-color: $color-text-bg3;
+        -webkit-box-shadow: 0 0 3px $color-text-bg3;
+        -moz-box-shadow: 0 0 3px $color-text-bg3;
+        box-shadow: 0 0 3px $color-text-bg3;
+    }
+    50%{
+        border-color: $color-text-bg3;
+        -webkit-box-shadow: 0 0 5px $color-text-bg3;
+        -moz-box-shadow: 0 0 5px $color-text-bg3;
+        box-shadow: 0 0 5px $color-text-bg3;
+    }
+    100%{
+        border-color: $color-text-bg3;
+        -webkit-box-shadow: 0 0 3px $color-text-bg3;
+        -moz-box-shadow: 0 0 3px $color-text-bg3;
+        box-shadow: 0 0 3px $color-text-bg3;
+    }
+}
+
+@keyframes pulsing-border{
+    0%{
+        -webkit-box-shadow: 0 0 0 $color-text-bg1;
+        -moz-box-shadow: 0 0 0 $color-text-bg1;
+        box-shadow: 0 0 0 $color-text-bg1;
+    }
+    25%{
+        -webkit-box-shadow: 0 0 5px $color-text-bg1;
+        -moz-box-shadow: 0 0 5px $color-text-bg1;
+        box-shadow: 0 0 5px $color-text-bg1;
+    }
+    50%{
+        -webkit-box-shadow: 0 0 10px $color-text-bg1;
+        -moz-box-shadow: 0 0 10px $color-text-bg1;
+        box-shadow: 0 0 10px $color-text-bg1;
+    }
+    75%{
+        -webkit-box-shadow: 0 0 5px $color-text-bg1;
+        -moz-box-shadow: 0 0 5px $color-text-bg1;
+        box-shadow: 0 0 5px $color-text-bg1;
+    }
+    100%{
+        -webkit-box-shadow: 0 0 0 $color-text-bg1;
+        -moz-box-shadow: 0 0 0 $color-text-bg1;
+        box-shadow: 0 0 0 $color-text-bg1;
+    }
+}

@@ -1,0 +1,153 @@
+.cart{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    &:after{
+        content: '';
+        width: 100%;
+        height: auto;
+        min-height: 10px;
+        background-color: transparent;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 5;
+    }
+
+    &:hover{
+
+        .cart-modal{
+            display: flex;
+        }
+    }
+
+    .cart{
+
+        &-content{
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+
+        &-icon{
+            width: 100%;
+            max-width: 26px;
+            height: auto;
+
+            svg{
+                width: 26px;
+                height: 26px;
+                display: block;
+                @include svg-color($text);
+            }
+        }
+
+        &-title{
+            @include text(12, 12, 400, $text, $roboto);
+        }
+
+        &-modal{
+            width: 100%;
+            max-width: 271px;
+            min-width: 271px;
+            height: auto;
+            min-height: 174px;
+            display: none;
+            justify-content: flex-start;
+            flex-flow: column;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            background-color: $color-text-bg10;
+            border-radius: 4px;
+            position: absolute;
+            top: calc(100% + 5px);
+            right: 0;
+            z-index: 16;
+
+            &-triangle{
+                width: 100%;
+                max-width: 12px;
+                min-width: 12px;
+                height: auto;
+                max-height: 12px;
+                min-height: 12px;
+                background-color: $color-text-bg10;
+                position: absolute;
+                right: 41px;
+                top: -5px;
+                transform: rotate(45deg);
+                z-index: 15;
+            }
+
+            &-empty{
+                @include text(18, 18, 700, $white, $roboto);
+                width: 100%;
+                display: block;
+                margin-top: 15px;
+                text-align: center;
+            }
+
+            &-item{
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                padding-bottom: 3.5px;
+                padding-top: 3.5px;
+                padding-left: 15px;
+                border-bottom: 1px solid $input-border;
+                background-color: $color-text-bg10;
+                position: relative;
+
+                &__thumb{
+                    width: 100%;
+                    max-width: 60px;
+                    height: auto;
+                    margin-right: 8px;
+                    @include no-mouse-effects;
+
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                &__details{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-flow: column;
+                }
+
+                &__name{
+                    @include text(8, 8, 400, $color-text-bg4, $roboto);
+                    display: block;
+                    margin-bottom: 4px;
+                    @include no-mouse-effects;
+                }
+
+                &__quant{
+                    @include text(8, 8, 400, $color-text-bg4, $roboto);
+                    display: block;
+                    margin-bottom: 4px;
+                }
+
+                &__price{
+                    @include text(8, 8, 400, $color-text-bg4, $roboto);
+                    display: block;
+                }
+
+                &__remove{
+                    @include text(16, 16, 400, $color-text-bg4, $roboto);
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    z-index: 5;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

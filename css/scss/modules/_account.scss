@@ -1,0 +1,177 @@
+.account{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 24px;
+    cursor: pointer;
+
+    &:hover{
+
+        .account-modal{
+            display: flex;
+        }
+    }
+
+    .account{
+
+        &-content{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        &-icon{
+            width: 100%;
+            max-width: 19px;
+            height: auto;
+            margin-right: 8px;
+
+            svg{
+                width: 19px;
+                height: 19px;
+                display: block;
+                @include svg-color($text);
+            }
+        }
+
+        &-details{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            flex-flow: column;
+        }
+
+        &-greeting{
+            @include text(12, 12, 400, $text, $roboto);
+            display: block;
+        }
+
+        &-title{
+            @include text(12, 12, 400, $text, $roboto);
+            display: block;
+            margin-top: 1px;
+        }
+
+        &-link{
+            @include text(12, 12, 400, $text, $roboto);
+            @include no-mouse-effects;
+
+            &:hover{
+                color: $text !important;
+                text-decoration: underline !important;
+            }
+        }
+
+        &-modal{
+            width: 100%;
+            max-width: 280px;
+            min-width: 280px;
+            height: auto;
+            display: none;
+            align-items: center;
+            justify-content: flex-start;
+            flex-flow: column;
+            border-radius: 4px 4px 0 0;
+            background-color: $color-text-bg5;
+            position: absolute;
+            top: calc(100% + 3px);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 16;
+
+            &:before{
+                content: '';
+                width: 100%;
+                max-width: 14px;
+                min-width: 14px;
+                height: auto;
+                max-height: 14px;
+                min-height: 14px;
+                background-color: $color-text-bg6;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: rotate(45deg) translate(-50%, 0);
+                z-index: 15;
+            }
+
+            &-header{
+                width: 100%;
+                height: auto;
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding-left: 15px;
+                border-radius: 4px 4px 0 0;
+                background-color: $color-text-bg6;
+            }
+
+            &-title{
+                @include text(16, 16, 400, $white, $roboto);
+            }
+
+            &-content{
+                width: 100%;
+                height: auto;
+                min-height: 252px;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 24px;
+                background-color: $white;
+            }
+
+            &-input{
+                @include text(12, 12, 400, $color-text-bg9, $roboto);
+                width: 100%;
+                max-width: 250px;
+                height: auto;
+                min-height: 34px;
+                background-color: $color-text-bg8;
+                border: 1px solid $color-text-bg7;
+                border-radius: 4px;
+                
+                &::placeholder, &::-moz-placeholder, &::-webkit-input-placeholder{
+                    @include text(12, 12, 400, $color-text-bg9, $roboto);
+                }
+
+                &:first-child{
+                    margin-bottom: 16px;
+                }
+            }
+
+            &-submit{
+                @include text(14, 14, 700, $white, $roboto);
+                width: 100%;
+                max-width: 250px;
+                height: auto;
+                min-height: 26px;
+                text-transform: uppercase;
+                margin-top: 82px;
+                border: none;
+                background-color: $title;
+            }
+
+            &-registration{
+                @include text(12, 12, 400, $color-text-bg9, $roboto);
+                width: 100%;
+                max-width: 250px;
+                display: block;
+                margin-top: 8px;
+                text-align: left;
+
+                &__link{
+                    @include text(12, 12, 700, $color-text-bg9, $roboto);
+                    @include no-mouse-effects;
+
+                    &:hover{
+                        color: $color-text-bg9 !important;
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+        }
+    }
+}

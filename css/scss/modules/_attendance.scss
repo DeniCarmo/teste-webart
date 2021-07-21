@@ -1,0 +1,116 @@
+.attendance{
+    display: flex;
+    align-items: center;
+    margin-right: 21px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover{
+
+        .attendance-modal{
+            display: flex;
+        }
+    }
+
+    .attendance{
+
+        &-content{
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+
+        &-icon{
+            width: 100px;
+            max-width: 18px;
+            margin-right: 10px;
+
+            svg{
+                width: 18px;
+                height: 18px;
+                @include svg-color($text);
+            }
+        }
+
+        &-title{
+            @include text(12, 12, 400, $text, $roboto);
+        }
+
+        &-modal{
+            width: 100%;
+            max-width: 189px;
+            min-width: 189px;
+            height: auto;
+            min-height: 152px;
+            display: none;
+            align-items: center;
+            justify-content: flex-start;
+            flex-flow: column;
+            padding-top: 16px;
+            background-color: $color-text-bg5;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 16;
+
+            &:before{
+                content: '';
+                width: 100%;
+                max-width: 12px;
+                min-width: 12px;
+                height: auto;
+                max-height: 12px;
+                min-height: 12px;
+                background-color: $color-text-bg5;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: rotate(45deg) translate(-50%, 0);
+                z-index: 15;
+            }
+
+            &-item{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                &:first-child{
+                    margin-bottom: 25px;
+                }
+
+                &__icon{
+                    width: 100%;
+                    max-width: 18px;
+                    height: auto;
+                    margin-right: 15px;
+
+                    svg{
+                        width: 24px;
+                        height: 24px;
+                        display: block;
+                        @include svg-color($white);
+                    }
+                }
+
+                &__details{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-flow: column
+                }
+
+                &__title{
+                    @include text(16, 16, 400, $white, $roboto);
+                    display: block;
+                }
+
+                &__subtitle{
+                    @include text(12, 12, 400, $white, $roboto);
+                    display: block;
+                    margin-top: 3.5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Web.art</title>
+
+    <link rel="preload" as="style" href="./bootstrap/bootstrap.min.css">
+    <link rel="preload" as="style" href="./dist/slick.min.css">
+    <link rel="preload" as="style" href="./dist/theme.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/slick.min.css">
+    <link rel="stylesheet" href="./dist/theme.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mask"></div>
+    <header class="header" id="header">
+        <div class="menu-mobile-open" id="menuOpen">
+            <div class="menu-mobile-bar"></div>
+            <div class="menu-mobile-bar"></div>
+            <div class="menu-mobile-bar"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="logo col-12 col-lg-2 col-xl-2">
+                    <img src="./img/logo.png" alt="Wap.store logo" class="logo-img">
+                </div>
+                <div class="search d-flex col-12 col-lg-12 col-xl-6">
+                    <form action="javascript:void(0);" method="GET" class="search-form">
+                        <input type="text" name="search" id="search" class="search-input">
+                        <button type="submit" class="search-submit">
+                            <i class="search-submit__icon">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z" fill="black"/>
+                                </svg>
+                            </i>
+                        </button>
+                    </form>
+                </div>
+                <div class="header-details d-none d-lg-none d-xl-flex d-lg-flex col-lg-4 col-xl-4 p-0">
+                    <div class="attendance">
+                        <div class="attendance-content">
+                            <i class="attendance-icon">
+                                <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 0C4.03 0 0 4.03 0 9V16C0 17.66 1.34 19 3 19H6V11H2V9C2 5.13 5.13 2 9 2C12.87 2 16 5.13 16 9V11H12V19H16V20H9V22H15C16.66 22 18 20.66 18 19V9C18 4.03 13.97 0 9 0Z" fill="black"/>
+                                </svg>
+                            </i>
+                            <span class="attendance-title">Atendimento</span>
+                        </div>
+
+                        <div class="attendance-modal">
+                            <div class="attendance-modal-item">
+                                <i class="attendance-modal-item__icon">
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.01 12.8654C15.78 12.8654 14.59 12.6654 13.48 12.3054C13.13 12.1854 12.74 12.2754 12.47 12.5454L10.9 14.5154C8.07 13.1654 5.42 10.6154 4.01 7.68535L5.96 6.02535C6.23 5.74535 6.31 5.35535 6.2 5.00535C5.83 3.89535 5.64 2.70535 5.64 1.47535C5.64 0.935352 5.19 0.485352 4.65 0.485352H1.19C0.65 0.485352 0 0.725352 0 1.47535C0 10.7654 7.73 18.4854 17.01 18.4854C17.72 18.4854 18 17.8554 18 17.3054V13.8554C18 13.3154 17.55 12.8654 17.01 12.8654Z" fill="white"/>
+                                    </svg>
+                                </i>
+                                <div class="attendance-modal-item__details">
+                                    <span class="attendance-modal-item__title">
+                                        (XX) XXXX-XXXX
+                                    </span>
+                                    <span class="attendance-modal-item__subtitle">
+                                        Seg a sexta, 8h às 18h
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="attendance-modal-item">
+                                <i class="attendance-modal-item__icon attendance-modal-item__icon--whatsapp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.573 0.485354H11.567C9.43472 0.484091 7.34363 1.07244 5.52486 2.18537C3.70608 3.2983 2.23046 4.89246 1.26111 6.79165C0.291748 8.69083 -0.133593 10.8211 0.0321002 12.9469C0.197793 15.0727 0.948066 17.1113 2.19999 18.8374L0.760985 23.1354L5.20799 21.7134C6.71373 22.7054 8.43053 23.3316 10.2213 23.5422C12.0122 23.7528 13.8274 23.5418 15.5222 22.9261C17.2169 22.3104 18.7443 21.307 19.9824 19.9961C21.2205 18.6852 22.1349 17.1029 22.6528 15.3758C23.1707 13.6486 23.2776 11.8243 22.9651 10.0484C22.6526 8.27253 21.9293 6.59431 20.8528 5.1477C19.7764 3.70109 18.3767 2.52613 16.7655 1.71663C15.1543 0.907122 13.3761 0.485479 11.573 0.485354ZM18.305 16.8244C18.0711 17.2478 17.746 17.6139 17.3532 17.8964C16.9605 18.1788 16.5099 18.3704 16.034 18.4574C15.434 18.5864 14.64 18.6884 11.981 17.5864C9.63776 16.4397 7.64744 14.6819 6.21999 12.4984C5.43451 11.4921 4.95729 10.28 4.84599 9.00835C4.83123 8.48161 4.92933 7.9578 5.13372 7.47211C5.33811 6.98641 5.64404 6.55006 6.03099 6.19235C6.35705 5.90665 6.78089 5.75796 7.21399 5.77735C7.35699 5.77735 7.48599 5.78435 7.60199 5.79035C7.94199 5.80435 8.11299 5.82535 8.33699 6.36135C8.61599 7.03435 9.29599 8.69435 9.37699 8.86135C9.43416 8.95435 9.46842 9.05961 9.47694 9.16845C9.48546 9.27729 9.468 9.38659 9.42599 9.48735C9.33078 9.68362 9.20411 9.86299 9.05099 10.0184C8.87999 10.2184 8.71799 10.3654 8.55099 10.5764C8.39499 10.7604 8.21799 10.9564 8.41499 11.2964C8.92332 12.1615 9.5557 12.9476 10.292 13.6294C11.0809 14.3542 11.9997 14.9236 13 15.3074C13.1332 15.3705 13.2823 15.392 13.4279 15.369C13.5735 15.346 13.7088 15.2795 13.816 15.1784C14.1372 14.7947 14.4376 14.3941 14.716 13.9784C14.7984 13.8409 14.929 13.7389 15.0824 13.6923C15.2358 13.6458 15.401 13.6579 15.546 13.7264C15.858 13.8344 17.512 14.6524 17.851 14.8214C18.19 14.9904 18.415 15.0734 18.497 15.2164C18.5883 15.7596 18.522 16.3176 18.306 16.8244H18.305Z" fill="white"/>
+                                    </svg>
+                                </i>
+                                <div class="attendance-modal-item__details">
+                                    <span class="attendance-modal-item__title">
+                                        (XX) XXXX-XXXX
+                                    </span>
+                                    <span class="attendance-modal-item__subtitle">
+                                        Seg a sexta, 8h às 18h
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account">
+                        <div class="account-content">
+                            <i class="account-icon">
+                                <svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                        <path d="M9.24404 10.839C9.95719 10.8488 10.6648 10.713 11.3237 10.44C11.9826 10.1669 12.5789 9.76236 13.076 9.25099C13.5872 8.75373 13.9916 8.15743 14.2645 7.49855C14.5374 6.83967 14.673 6.13206 14.663 5.41899C14.6729 4.70584 14.5371 3.99818 14.264 3.3393C13.991 2.68042 13.5864 2.08416 13.075 1.58699C12.5719 1.08376 11.9746 0.684572 11.3172 0.412223C10.6598 0.139873 9.95514 -0.000305176 9.24355 -0.000305176C8.53195 -0.000305176 7.82732 0.139873 7.16991 0.412223C6.51249 0.684572 5.91517 1.08376 5.41205 1.58699C4.9008 2.08404 4.49629 2.68014 4.22325 3.33884C3.95021 3.99754 3.81437 4.705 3.82404 5.41799C3.81424 6.13114 3.95001 6.83879 4.22305 7.49767C4.4961 8.15655 4.90068 8.75281 5.41205 9.24999C5.90917 9.76149 6.5054 10.1662 7.16428 10.4394C7.82315 10.7126 8.53083 10.8486 9.24404 10.839ZM6.34405 2.51999C6.7248 2.13901 7.17688 1.83679 7.67448 1.63059C8.17207 1.42439 8.70542 1.31826 9.24404 1.31826C9.78267 1.31826 10.316 1.42439 10.8136 1.63059C11.3112 1.83679 11.7633 2.13901 12.144 2.51999C12.5331 2.89455 12.8406 3.34553 13.0471 3.84458C13.2536 4.34364 13.3547 4.88 13.344 5.41999C13.3547 5.95997 13.2536 6.49634 13.0471 6.99539C12.8406 7.49445 12.5331 7.94542 12.144 8.31999C11.7633 8.70096 11.3112 9.00319 10.8136 9.20938C10.316 9.41558 9.78267 9.52171 9.24404 9.52171C8.70542 9.52171 8.17207 9.41558 7.67448 9.20938C7.17688 9.00319 6.7248 8.70096 6.34405 8.31999C5.9549 7.94545 5.64741 7.49449 5.4409 6.99543C5.23439 6.49636 5.13332 5.95998 5.14404 5.41999C5.13332 4.87999 5.23439 4.34361 5.4409 3.84455C5.64741 3.34548 5.9549 2.89452 6.34405 2.51999Z" fill="#535456"/>
+                                        <path d="M18.726 17.301C18.6908 16.824 18.6301 16.3494 18.544 15.879C18.4588 15.3955 18.3419 14.9181 18.194 14.45C18.0445 13.9865 17.8475 13.5398 17.606 13.117C17.3683 12.691 17.0699 12.3019 16.72 11.962C16.3515 11.6154 15.9192 11.3437 15.447 11.162C14.9288 10.9623 14.3774 10.8625 13.822 10.868C13.4978 10.9028 13.1913 11.0329 12.941 11.242C12.677 11.414 12.368 11.613 12.023 11.834C11.6505 12.0566 11.2518 12.2323 10.836 12.357C9.89453 12.6689 8.87752 12.6689 7.93603 12.357C7.52058 12.2324 7.1222 12.0567 6.75003 11.834C6.40903 11.616 6.10003 11.417 5.83203 11.242C5.5821 11.0331 5.27587 10.9029 4.95203 10.868C4.39665 10.8624 3.84524 10.9621 3.32703 11.162C2.85482 11.3435 2.42245 11.6153 2.05403 11.962C1.70421 12.3019 1.40574 12.691 1.16803 13.117C0.925503 13.5404 0.727448 13.9878 0.577026 14.452C0.429241 14.9201 0.312323 15.3975 0.227026 15.881C0.140827 16.3513 0.080072 16.826 0.0450257 17.303C0.0150257 17.733 2.57206e-05 18.18 2.57206e-05 18.632C-0.0232141 19.1546 0.0635831 19.6764 0.254796 20.1634C0.44601 20.6503 0.737376 21.0918 1.11003 21.459C1.88803 22.1703 2.91572 22.5452 3.96903 22.502H14.8C15.8533 22.5452 16.881 22.1703 17.659 21.459C18.0317 21.0918 18.3231 20.6504 18.5143 20.1634C18.7056 19.6764 18.7923 19.1546 18.769 18.632C18.769 18.179 18.754 17.732 18.724 17.303L18.726 17.301ZM16.753 20.501C16.4888 20.7372 16.1806 20.9189 15.8459 21.0356C15.5113 21.1523 15.1568 21.2017 14.803 21.181H3.96903C3.61529 21.2019 3.2609 21.1526 2.92625 21.0361C2.59161 20.9196 2.28329 20.7381 2.01903 20.502C1.77695 20.2572 1.58942 19.9639 1.46878 19.6414C1.34813 19.3189 1.2971 18.9746 1.31903 18.631C1.31903 18.209 1.33303 17.793 1.36103 17.393C1.39301 16.9636 1.44809 16.5364 1.52603 16.113C1.60071 15.6867 1.70326 15.2658 1.83303 14.853C1.95466 14.4762 2.11485 14.1129 2.31103 13.769C2.48572 13.4547 2.705 13.1674 2.96203 12.916C3.20757 12.6871 3.49523 12.5081 3.80903 12.389C4.14066 12.2621 4.49199 12.1944 4.84703 12.189C4.89303 12.214 4.97503 12.26 5.10903 12.347C5.38003 12.524 5.69203 12.725 6.03803 12.947C6.5049 13.2304 7.00547 13.4541 7.52803 13.613C8.73436 14.0111 10.0367 14.0111 11.243 13.613C11.7659 13.4541 12.2668 13.2304 12.734 12.947C13.087 12.721 13.391 12.525 13.662 12.347C13.795 12.26 13.877 12.213 13.924 12.189C14.2794 12.1943 14.6311 12.262 14.963 12.389C15.2766 12.508 15.5643 12.6866 15.81 12.915C16.0672 13.1666 16.2865 13.4543 16.461 13.769C16.6573 14.1128 16.8175 14.4761 16.939 14.853C17.0692 15.2658 17.1721 15.6867 17.247 16.113C17.3248 16.5367 17.3799 16.9643 17.412 17.394C17.44 17.794 17.454 18.208 17.454 18.631C17.476 18.9746 17.4249 19.3189 17.3043 19.6414C17.1836 19.9639 16.9961 20.2572 16.754 20.502L16.753 20.501Z" fill="#535456"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="18.772" height="22.5" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </i>
+                            <div class="account-details">
+                                <span class="account-greeting">Seja bem vindo(a)!</span>
+                                <span class="account-title">
+                                    <a href="#" class="account-link account-link__login">Entre</a>
+                                    ou
+                                    <a href="#" class="account-link account-link__register">cadastre-se</a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="account-modal">
+                            <div class="account-modal-header">
+                                <span class="account-modal-title">
+                                    Faça seu login
+                                </span>
+                            </div>
+
+                            <div class="account-modal-content">
+                                <input type="text" name="login" id="login" class="account-modal-input" placeholder="Seu e-mail">
+                                <input type="password" name="password" id="password" class="account-modal-input" placeholder="Senha">
+                                <button type="submit" class="account-modal-submit">Entrar</button>
+                                <span class="account-modal-registration">
+                                    Não possui uma conta? <a href="#" class="account-modal-registration__link">Registrar</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="cart-content">
+                            <i class="cart-icon">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.58331 19.5C6.39165 19.5 5.42748 20.475 5.42748 21.6667C5.42748 22.8583 6.39165 23.8333 7.58331 23.8333C8.77498 23.8333 9.74998 22.8583 9.74998 21.6667C9.74998 20.475 8.77498 19.5 7.58331 19.5ZM1.08331 2.16666V4.33332H3.24998L7.14998 12.5558L5.68748 15.21C5.51415 15.5133 5.41665 15.8708 5.41665 16.25C5.41665 17.4417 6.39165 18.4167 7.58331 18.4167H20.5833V16.25H8.03831C7.88665 16.25 7.76748 16.1308 7.76748 15.9792L7.79998 15.8492L8.77498 14.0833H16.8458C17.6583 14.0833 18.3733 13.6392 18.7416 12.9675L22.62 5.93666C22.7066 5.78499 22.75 5.60082 22.75 5.41666C22.75 4.82082 22.2625 4.33332 21.6666 4.33332H5.64415L4.62581 2.16666H1.08331ZM18.4166 19.5C17.225 19.5 16.2608 20.475 16.2608 21.6667C16.2608 22.8583 17.225 23.8333 18.4166 23.8333C19.6083 23.8333 20.5833 22.8583 20.5833 21.6667C20.5833 20.475 19.6083 19.5 18.4166 19.5Z" fill="black"/>
+                                </svg>
+                            </i>
+                            <span class="cart-title">Meu carrinho</span>
+                        </div>
+
+                        <div class="cart-modal">
+                            <span class="cart-modal-triangle"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="menu-mobile-close" id="menuClose">&#10006;</div>
+            <div class="container">
+                <div class="row">
+                    <ul class="menu col-12 d-flex">
+                        <li class="menu-parent">
+                            <a href="#" class="menu-parent__link">Mais Pesquisados</a>
+
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 1</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 2</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 3</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-parent">
+                            <a href="#" class="menu-parent__link">Todos os produtos</a>
+
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 1</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 2</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-parent">
+                            <a href="#" class="menu-parent__link">Categorias</a>
+
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 1</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 2</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 3</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-parent">
+                            <a href="#" class="menu-parent__link">Ultimos Lançamentos</a>
+
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 1</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-parent">
+                            <a href="#" class="menu-parent__link">Promoções</a>
+
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 1</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 2</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-item__link">Item 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <section class="showcase col-12">
+                <h3 class="showcase-title">Nossos principais produtos</h3>
+
+                <div class="showcase-content showcase-carousel-js" id="showcase">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <i class="footer-icon">
+            <svg width="41" height="33" viewBox="0 0 41 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.557 5.29119L35.1281 0L40.3875 8.68608L36.2109 7.66335L30.0656 32.2869H22.6477L17.9789 18.3097H17.9016L13.5984 32.2869H4.54219L0 14.3892H6.85547L9.25312 23.8849H9.33047L13.7531 9.17614H21.4875L25.9172 22.0241H25.9945L29.9883 6.13636L26.557 5.29119Z" fill="#F5F5F5"/>
+            </svg>
+        </i>
+    </footer>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/theme.js"></script>
+</body>
+</html>

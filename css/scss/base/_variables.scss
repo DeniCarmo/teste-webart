@@ -1,0 +1,46 @@
+// Colors
+$title : #E85128;
+$text: #000000;
+$white: #ffffff;
+$input-bg: #ebeaea;
+$input-border: #e4e4e4;
+
+$color-text-bg1: #4bb854;
+$color-text-bg2: #9ce6a2;
+$color-text-bg3: #e85128;
+$color-text-bg4: #f5f5f5;
+$color-text-bg5: #ee6f4c;
+$color-text-bg6: #e87556;
+$color-text-bg7: #e8e8e8;
+$color-text-bg8: #f1f1f1;
+$color-text-bg9: #aaaaaa;
+$color-text-bg10: #ee6f4c;
+
+
+
+
+// Fonts
+$roboto: 'Roboto', sans-serif;
+
+a{
+
+    &:hover, &:focus, &:active, &:visited{
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: $roboto;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+
+    li{
+        list-style: none;
+    }
+}
